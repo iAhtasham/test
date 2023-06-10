@@ -14,6 +14,15 @@ app.get('/crash', (req, res) => {
   res.send('crashed!!!');
 });
 
+
+app.get('/c', (req, res) => {
+  if (true){
+    throw new Error();
+  }
+  res.send('crashed!!!');
+});
+
+
 app.listen(config.port, () => {
   console.log(`Server started on port ${config.port}`);
 });
